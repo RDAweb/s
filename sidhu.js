@@ -171,19 +171,7 @@ document.getElementById('previous').addEventListener('click', ()=>{
         audioElement.play();
         masterPlay.classList.remove('fa-circle-play'); 
         masterPlay.classList.add('fa-circle-pause');
-
-audioElement.addEventListener('ended', () => {
-    songIndex += 1;
-    if (songIndex >= songs.length) {
-        songIndex = 0; // Loop back to the first song if it's the last one
-    }
-    audioElement.src = songs[songIndex].filePath; // Update the audio source
-    masterSongName.innerText = songs[songIndex].songName; // Update the song name display
-    audioElement.currentTime = 0; // Reset the time
-    audioElement.play(); // Play the next song
-    masterPlay.classList.remove('fa-circle-play'); 
-    masterPlay.classList.add('fa-circle-pause'); // Update play/pause icon
-});
+})
 // Handle song end to play the next song and update the icons
 audioElement.addEventListener('ended', () => {
     // Reset the icon of the current song
@@ -346,4 +334,3 @@ const playPreviousSong = () => {
     document.getElementById(songIndex).classList.remove('fa-circle-play');
     document.getElementById(songIndex).classList.add('fa-circle-pause');
 };
-})
