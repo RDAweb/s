@@ -171,10 +171,7 @@ document.getElementById('previous').addEventListener('click', ()=>{
         audioElement.play();
         masterPlay.classList.remove('fa-circle-play'); 
         masterPlay.classList.add('fa-circle-pause');
-})
 
-
-<<<<<<< Updated upstream
 audioElement.addEventListener('ended', () => {
     songIndex += 1;
     if (songIndex >= songs.length) {
@@ -187,7 +184,6 @@ audioElement.addEventListener('ended', () => {
     masterPlay.classList.remove('fa-circle-play'); 
     masterPlay.classList.add('fa-circle-pause'); // Update play/pause icon
 });
-=======
 // Handle song end to play the next song and update the icons
 audioElement.addEventListener('ended', () => {
     // Reset the icon of the current song
@@ -350,4 +346,3 @@ const playPreviousSong = () => {
     document.getElementById(songIndex).classList.remove('fa-circle-play');
     document.getElementById(songIndex).classList.add('fa-circle-pause');
 };
->>>>>>> Stashed changes
