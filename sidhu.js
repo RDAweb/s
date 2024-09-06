@@ -346,3 +346,4 @@ const playPreviousSong = () => {
     document.getElementById(songIndex).classList.remove('fa-circle-play');
     document.getElementById(songIndex).classList.add('fa-circle-pause');
 };
+})
