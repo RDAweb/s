@@ -530,10 +530,6 @@ const handleKeyboardShortcuts = (e) => {
 // Add the event listener for keyboard shortcuts
 document.addEventListener('keydown', handleKeyboardShortcuts);
 
-// Disable shortcuts when the search bar is focused
-searchBar.addEventListener('focus', () => {
-    document.removeEventListener('keydown', handleKeyboardShortcuts);
-});
 
 // Re-enable shortcuts when the search bar loses focus
 searchBar.addEventListener('blur', () => {
